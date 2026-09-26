@@ -1,0 +1,43 @@
+{
+  "actor": {
+    "model": "gpt-4o-mini",
+    "base_url": "https://api.openai.com/v1",
+    "api_key_env": "OPENAI_API_KEY",
+    "temperature": 0,
+    "max_tokens": 2048
+  },
+  "builder": {
+    "model": "graphpi-builder",
+    "base_url": "http://127.0.0.1:8001/v1",
+    "api_key_env": "GRAPHPI_LOCAL_API_KEY",
+    "local": true,
+    "disable_thinking": true,
+    "max_tokens": 8192
+  },
+  "linker": {
+    "model": "graphpi-linker",
+    "base_url": "http://127.0.0.1:8002/v1",
+    "api_key_env": "GRAPHPI_LOCAL_API_KEY",
+    "local": true,
+    "disable_thinking": true,
+    "max_tokens": 512
+  },
+  "embedding": {
+    "model": "BAAI/bge-m3",
+    "base_url": "http://127.0.0.1:8003/v1",
+    "api_key_env": "GRAPHPI_LOCAL_API_KEY",
+    "local": true
+  },
+  "algorithm": {
+    "neighbors": 3,
+    "pair_limit": 96,
+    "retrieval_top_k": 24,
+    "evidence_budget": 4,
+    "budget_scope": "episode",
+    "rounds": 6,
+    "max_nodes_per_source": 128,
+    "embedding_batch_size": 64,
+    "builder_batch_chars": 12000,
+    "builder_batch_units": 64
+  }
+}

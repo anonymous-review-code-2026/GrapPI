@@ -1,0 +1,15 @@
+{
+  "algorithm": {
+    "neighbors": 3,
+    "pair_limit": 96,
+    "retrieval_top_k": 24,
+    "evidence_budget": 4,
+    "budget_scope": "receive",
+    "rounds": 6,
+    "builder_batch_chars": 12000,
+    "builder_batch_units": 64
+  },
+  "linker": {
+    "max_tokens": 512
+  }
+}
